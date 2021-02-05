@@ -9,7 +9,7 @@ import (
 // Source represents a source of random int64 values in the range [0, 1<<63).
 type Source struct{}
 
-// Seed is not used, required to satisfy math.Source interface only.
+// Seed is not used, required to satisfy rand.Source interface only.
 func (s Source) Seed(seed int64) {}
 
 // Int63 returns a non-negative random 63-bit integer as an int64.
