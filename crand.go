@@ -20,8 +20,6 @@ func (s Source) Int63() int64 {
 // Uint64 returns a random 64-bit value as a uint64.
 func (s Source) Uint64() uint64 {
 	var v uint64
-	if err := binary.Read(rand.Reader, binary.BigEndian, &v); err != nil {
-		panic(err)
-	}
+	binary.Read(rand.Reader, binary.BigEndian, &v)
 	return v
 }
